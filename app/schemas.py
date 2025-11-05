@@ -22,8 +22,10 @@ class UserCreateReturnSchema(BaseModel):
    email: EmailStr
    created_at: datetime
 
-   class Config:
-      orm_mode = True
+   # class Config:
+   #    orm_mode = True
+   class ConfigDict:
+      from_attribute = True
 
 
 class PostSchema(PostBase):
@@ -32,15 +34,19 @@ class PostSchema(PostBase):
    owner_id: int
    owner: UserCreateReturnSchema
 
-   class Config:
-      orm_mode = True
+   # class Config:
+   #    orm_mode = True
+   class ConfigDict:
+      from_attribute = True
 
 class PostOut(BaseModel):
    Post: PostSchema
    vote: int
 
-   class Config:
-      orm_mode = True
+   # class Config:
+   #    orm_mode = True
+   class ConfigDict:
+      from_attribute = True
 
 class UserLogin(BaseModel):
    email: EmailStr
