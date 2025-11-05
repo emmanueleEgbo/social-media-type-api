@@ -25,7 +25,7 @@ class UserCreateReturnSchema(BaseModel):
    # class Config:
    #    orm_mode = True
    class ConfigDict:
-      from_attribute = True
+      from_attributes = True
 
 
 class PostSchema(PostBase):
@@ -37,7 +37,7 @@ class PostSchema(PostBase):
    # class Config:
    #    orm_mode = True
    class ConfigDict:
-      from_attribute = True
+      from_attributes = True
 
 class PostOut(BaseModel):
    Post: PostSchema
@@ -46,7 +46,7 @@ class PostOut(BaseModel):
    # class Config:
    #    orm_mode = True
    class ConfigDict:
-      from_attribute = True
+      from_attributes = True
 
 class UserLogin(BaseModel):
    email: EmailStr
