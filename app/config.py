@@ -1,9 +1,10 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy.engine import URL
 
 class Settings(BaseSettings):
     db_host: str
     db_name: str
+    test_db_name: str
     db_user: str
     db_password: str
     db_name: str
@@ -23,8 +24,8 @@ class Settings(BaseSettings):
             database=self.db_name
         )
 
-
-    class Config:
-        env_file=".env"
+    model_config = SettingsConfigDict(env_file=".env")
+    # class Config:
+    #     env_file=".env"
 
 settings = Settings()

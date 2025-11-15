@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr, conint
+from pydantic import BaseModel, EmailStr
 from datetime import datetime
 from typing import Optional, Literal
 
@@ -6,15 +6,6 @@ class PostBase(BaseModel):
    title: str
    content: str
    published: bool = True
-
-
-class PostCreateSchema(PostBase):
-   pass 
-
-
-class UserCreateSchema(BaseModel):
-   email: EmailStr
-   password: str
 
 
 class UserCreateReturnSchema(BaseModel):
@@ -28,7 +19,16 @@ class UserCreateReturnSchema(BaseModel):
       from_attributes = True
 
 
-class PostSchema(PostBase):
+class PostCreateSchema(PostBase):
+   pass
+
+
+class UserCreateSchema(BaseModel):
+   email: EmailStr
+   password: str
+
+
+class PostSchema(PostBase): # Post
    id: int
    created_at: datetime
    owner_id: int
@@ -39,9 +39,9 @@ class PostSchema(PostBase):
    class ConfigDict:
       from_attributes = True
 
-class PostOut(BaseModel):
-   Post: PostSchema
-   vote: int
+class PostOut(BaseModel): # PostOut
+   post: PostSchema
+   votes: int
 
    # class Config:
    #    orm_mode = True

@@ -4,13 +4,17 @@ from app.models import Base
 from app.config import settings
 
 
-SQLALCHEMY_DB_URL=settings.db_url
 
-engine = create_engine(SQLALCHEMY_DB_URL, echo=True)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+TEST_SQLALCHEMY_DATABASE_URL = (
+    f"postgresql+psycopg://{settings.db_user}:{settings.db_password}@{settings.db_host}:{settings.db_port}/{settings.test_db_name}"
+)
+
+engine = create_engine(TEST_SQLALCHEMY_DATABASE_URL, echo=True)
+
+TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def get_db():
-    db = SessionLocal()
+    db = TestingSessionLocal()
     try:
         yield db
     finally:
