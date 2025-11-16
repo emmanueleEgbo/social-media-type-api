@@ -3,10 +3,16 @@ name: My Social Media API Workflow
 on: [push, pull_request]
 
 jobs:
-  build:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
         uses: actions/checkout@v5
-      - name: say hi to your books
-        run: echo "Hello world!"
+      - name:  Installing python version 3.13
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13' 
+      - name: update pip
+        run: python -m pip install --upgrade pip
+      - name: Installing all dependencies
+        run: pip install -r requirements.txt
