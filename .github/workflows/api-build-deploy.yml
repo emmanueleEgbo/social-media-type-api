@@ -1,0 +1,12 @@
+name: My Social Media API Workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pulling git repo
+        uses: actions/checkout@v5
+      - name: say hi to your books
+        run: echo "Hello world!"
