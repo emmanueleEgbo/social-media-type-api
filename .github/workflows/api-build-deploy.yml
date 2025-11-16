@@ -1,4 +1,4 @@
-name: My Social Media API Workflow
+name: My Social Media Type API Workflow
 
 on: [push, pull_request]
 
