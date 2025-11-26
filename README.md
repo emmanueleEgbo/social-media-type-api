@@ -41,7 +41,7 @@ flowchart LR
     API --> DB[(PostgreSQL)]
     API --> AUTH[JWT + Argon2]
     API --> CI[GitHub Actions]
-    CI --> CLOUD[AWS / DigitalOcean]
+    CI --> CLOUD[AWS + DigitalOcean]
 
 
 🧭 Roadmap
