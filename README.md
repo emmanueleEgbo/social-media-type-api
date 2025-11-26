@@ -39,7 +39,7 @@ flowchart LR
     Client[Client] --> API[FastAPI Backend]
     API --> DB[(PostgreSQL)]
     API --> AUTH[JWT + Argon2]
-    API --> CI/CD[CI/CD Pipeline (GitHub Actions)]
+    API --> CI/CD[CI + CD Pipeline using GitHub Actions]
     CI/CD --> CLOUD[AWS + DigitalOcean]
 ```
 
