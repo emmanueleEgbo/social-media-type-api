@@ -12,7 +12,7 @@ It allows users to **sign up, post tweets, like/unlike posts, and view paginated
 |--------|-------------|
 | 👤 **Authentication** | Secure JWT access/refresh tokens, password hashing via **Argon2** |
 | 📝 **Posts & Feeds** | Create posts, like/unlike posts, personalized timelines |
-| 📄 **Pagination** | Efficient paginated feeds for scalable performance |
+| 📄 **Pagination & Search** | Efficient paginated feeds & content search with limit parameters for scalable performance |
 | 🗄 **Database** | **PostgreSQL** with SQLAlchemy ORM and Alembic migrations |
 | 🧪 **Testing** | Comprehensive **PyTest** coverage with fixtures and mocks |
 | 🐳 **DevOps Ready** | Fully containerized using **Docker** & `.env` config |
@@ -48,9 +48,7 @@ flowchart LR
 ## 🧭 Roadmap
 🔔 Real-time notifications using WebSockets
 
-🛂 API rate limiting for abuse prevention
-
-🔍 Search, hashtags & content discovery
+🛂 API rate limiting for abuse and DDOS mitigation
 
 🧩 Optional GraphQL variant
 
