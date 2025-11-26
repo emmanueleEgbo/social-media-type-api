@@ -37,11 +37,12 @@ It allows users to **sign up, post tweets, like/unlike posts, follow users, and 
 
 ```mermaid
 flowchart LR
-Client --> API[FastAPI Backend]
-API --> DB[(PostgreSQL)]
-API --> Auth[JWT + Argon2]
-API --> CI[GitHub Actions]
-CI --> CLOUD[AWS / DigitalOcean]
+    Client[Client] --> API[FastAPI Backend]
+    API --> DB[(PostgreSQL)]
+    API --> AUTH[JWT + Argon2]
+    API --> CI[GitHub Actions]
+    CI --> CLOUD[AWS / DigitalOcean]
+
 
 🧭 Roadmap
 
