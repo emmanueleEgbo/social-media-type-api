@@ -33,7 +33,7 @@ It allows users to **sign up, post tweets, like/unlike posts, and view paginated
 
 ---
 
-## 📐 Architecture Overview
+## Architecture Overview
 
 ```mermaid
 flowchart LR
@@ -42,7 +42,6 @@ flowchart LR
     API --> AUTH[JWT + Argon2]
     API --> CI[GitHub Actions]
     CI --> CLOUD[AWS + DigitalOcean]
----
 
 🧭 Roadmap
 🔔 Real-time notifications using WebSockets
