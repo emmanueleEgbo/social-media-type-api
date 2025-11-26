@@ -12,7 +12,6 @@ It allows users to **sign up, post tweets, like/unlike posts, and view paginated
 |--------|-------------|
 | 👤 **Authentication** | Secure JWT access/refresh tokens, password hashing via **Argon2** |
 | 📝 **Posts & Feeds** | Create posts, like/unlike posts, personalized timelines |
-| 🔁 **Follow System** | Follow/unfollow users, follower/following relationships |
 | 📄 **Pagination** | Efficient paginated feeds for scalable performance |
 | 🗄 **Database** | **PostgreSQL** with SQLAlchemy ORM and Alembic migrations |
 | 🧪 **Testing** | Comprehensive **PyTest** coverage with fixtures and mocks |
@@ -40,8 +39,8 @@ flowchart LR
     Client[Client] --> API[FastAPI Backend]
     API --> DB[(PostgreSQL)]
     API --> AUTH[JWT + Argon2]
-    API --> CI[GitHub Actions]
-    CI --> CLOUD[AWS + DigitalOcean]
+    API --> CI/CD Pipeline[GitHub Actions]
+    CI/CD Pipeline --> CLOUD[AWS + DigitalOcean]
 ```
 
 🧭 Roadmap
