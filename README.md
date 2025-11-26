@@ -41,7 +41,7 @@ Client --> API[FastAPI Backend]
 API --> DB[(PostgreSQL)]
 API --> Auth[JWT + Argon2]
 API --> CI[GitHub Actions]
-CI --> DO[AWS / DigitalOcean]
+CI --> CLOUD[AWS / DigitalOcean]
 
 🧭 Roadmap
 
