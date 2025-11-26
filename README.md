@@ -44,7 +44,7 @@ flowchart LR
     CI/CD --> CLOUD[AWS + DigitalOcean]
 ```
 
-🧭 Roadmap
+🧭 "<h2>Roadmap</h2><br>"
 🔔 Real-time notifications using WebSockets
 
 🛂 API rate limiting for abuse prevention
