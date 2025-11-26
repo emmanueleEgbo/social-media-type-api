@@ -44,7 +44,7 @@ flowchart LR
     CI/CD --> CLOUD[AWS + DigitalOcean]
 ```
 
-🧭 "<h2>Roadmap</h2><br>"
+## 🧭 Roadmap
 🔔 Real-time notifications using WebSockets
 
 🛂 API rate limiting for abuse prevention
@@ -53,7 +53,7 @@ flowchart LR
 
 🧩 Optional GraphQL variant
 
-🚦 Getting Started
+## 🚦 Getting Started
 1️⃣ Clone the repository
 git clone https://github.com/emmanueleEgbo/social-media-type-api.git
 cd social-media-type-api
@@ -73,15 +73,15 @@ Swagger UI → http://localhost:8000/docs
 
 ReDoc → http://localhost:8000/redoc
 
-📸 Sample Endpoints
+## 📸 Sample Endpoints
 POST /auth/login
 GET /posts
 GET  /users/{user_id}
 
-⭐ Contributing
+## ⭐ Contributing
 
 Pull requests are welcome. For major changes, please open an issue to discuss.
 
-📄 License
+## 📄 License
 
 MIT — free to use, modify, and distribute.
