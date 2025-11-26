@@ -2,7 +2,7 @@
 
 A **production-grade social media backend** built with **FastAPI**, **PostgreSQL**, **SQLAlchemy**, **Alembic**, and **JWT authentication** secured with **Argon2**.
 
-It allows users to **sign up, post tweets, like/unlike posts, follow users, and view paginated feeds** — fully tested, containerized, CI/CD-enabled, and deployable to the cloud.
+It allows users to **sign up, post tweets, like/unlike posts, and view paginated feeds** — fully tested, containerized, CI/CD-enabled, and deployable to the cloud.
 
 ---
 
@@ -42,17 +42,16 @@ flowchart LR
     API --> AUTH[JWT + Argon2]
     API --> CI[GitHub Actions]
     CI --> CLOUD[AWS + DigitalOcean]
-
+---
 
 🧭 Roadmap
+🔔 Real-time notifications using WebSockets
 
-🔔 WebSocket live notifications
+🛂 API rate limiting for abuse prevention
 
-🛂 Rate limiting & throttling
+🔍 Search, hashtags & content discovery
 
-🔍 Search, hashtags & mentions
-
-🧩 GraphQL interface
+🧩 Optional GraphQL variant
 
 🚦 Getting Started
 1️⃣ Clone the repository
@@ -76,9 +75,8 @@ ReDoc → http://localhost:8000/redoc
 
 📸 Sample Endpoints
 POST /auth/login
-POST /posts
-POST /posts/{post_id}
-GET  /users/{user_id}/feed
+GET /posts
+GET  /users/{user_id}
 
 ⭐ Contributing
 
