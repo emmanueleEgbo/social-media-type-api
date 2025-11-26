@@ -37,10 +37,10 @@ It allows users to **sign up, post tweets, like/unlike posts, and view paginated
 ```mermaid
 flowchart LR
     Client[Client App] --> API[FastAPI Backend]
-    API --> AUTH["Authentication\nJWT + Argon2"]
+    API --> AUTH["Authentication<br>JWT + Argon2"]
     AUTH --> API
     API --> DB[(PostgreSQL)]
-    API --> CI/CD["CI/CD Pipeline\nGitHub Actions"]
+    API --> CI/CD["CI/CD Pipeline<br>GitHub Actions"]
     CI/CD --> CLOUD[AWS + DigitalOcean]
 ```
 
