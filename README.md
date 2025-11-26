@@ -43,6 +43,7 @@ flowchart LR
     API --> CI/CD["CI/CD Pipeline<br>GitHub Actions"]
     CI/CD --> CLOUD[AWS + DigitalOcean]
 ```
+---
 
 ## 🧭 Roadmap
 🔔 Real-time notifications using WebSockets
@@ -53,18 +54,25 @@ flowchart LR
 
 🧩 Optional GraphQL variant
 
+---
+
 ## 🚦 Getting Started
 1️⃣ Clone the repository
+
 git clone https://github.com/emmanueleEgbo/social-media-type-api.git
+
 cd social-media-type-api
 
 2️⃣ Start services using Docker
+
 docker-compose up --build
 
 3️⃣ Apply database migrations
+
 alembic upgrade head
 
 4️⃣ Run tests
+
 pytest -q --disable-warnings
 
 5️⃣ Access the API Docs
@@ -74,8 +82,11 @@ Swagger UI → http://localhost:8000/docs
 ReDoc → http://localhost:8000/redoc
 
 ## 📸 Sample Endpoints
+
 POST /auth/login
+
 GET /posts
+
 GET  /users/{user_id}
 
 ## ⭐ Contributing
